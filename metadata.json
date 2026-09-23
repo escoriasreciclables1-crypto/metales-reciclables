@@ -1,0 +1,6 @@
+{
+  "name": "Ecowidia - Reciclaje de Metales & Widia",
+  "description": "Plataforma oficial de Ecowidia: gestión, recuperación y valorización de carburo de tungsteno (widia), superaleaciones, escorias y metales refractarios. En español e inglés.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

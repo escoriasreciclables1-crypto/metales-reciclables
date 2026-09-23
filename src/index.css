@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07130c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #064e3b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Horizontal scrolling market ticker */
+@keyframes ticker-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: ticker-marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ========================================================
+   HIGH-CONTRAST LIGHT MODE ARCHITECTURE
+   ======================================================== */
+.theme-light {
+  color-scheme: light;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Header & Navigation in Light Mode */
+.theme-light header {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-bottom-color: #cbd5e1 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07);
+}
+
+.theme-light header a.group span.font-display {
+  color: #0f172a !important;
+}
+
+.theme-light header nav button {
+  color: #334155 !important;
+}
+
+.theme-light header nav button:hover {
+  color: #047857 !important;
+}
+
+/* Market Ticker in Light Mode: crisp dark slate terminal strip for maximum readability */
+.theme-light [role="region"][aria-label="Market commodity ticker"] {
+  background-color: #0c1811 !important;
+  border-bottom-color: #1b3324 !important;
+}
+
+/* Base Sections in Light Mode */
+.theme-light section {
+  background-color: #f8fafc !important;
+  border-bottom-color: #e2e8f0 !important;
+}
+
+.theme-light section:nth-of-type(even) {
+  background-color: #ffffff !important;
+}
+
+/* Dark Industrial Background Overrides */
+.theme-light .bg-\[\#07130c\],
+.theme-light .bg-\[\#08170f\],
+.theme-light .bg-\[\#091b12\],
+.theme-light .bg-\[\#051109\],
+.theme-light .bg-\[\#07180e\],
+.theme-light .bg-\[\#040b06\],
+.theme-light .bg-\[\#030905\],
+.theme-light .bg-\[\#0a1c13\],
+.theme-light .bg-\[\#0c2318\],
+.theme-light .bg-\[\#0b2317\],
+.theme-light .bg-\[\#07130c\]\/70,
+.theme-light .bg-\[\#07130c\]\/90,
+.theme-light .bg-\[\#07130c\]\/95,
+.theme-light .bg-\[\#07130c\]\/98 {
+  background-color: #ffffff !important;
+}
+
+.theme-light .bg-emerald-950\/40,
+.theme-light .bg-emerald-950\/60,
+.theme-light .bg-emerald-950\/80,
+.theme-light .bg-emerald-950 {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-light .bg-emerald-900\/20,
+.theme-light .bg-emerald-900\/30,
+.theme-light .bg-emerald-900\/40 {
+  background-color: #ecfdf5 !important;
+}
+
+/* High-Contrast Borders */
+.theme-light .border-emerald-900\/30,
+.theme-light .border-emerald-900\/40,
+.theme-light .border-emerald-900\/50,
+.theme-light .border-emerald-900\/60,
+.theme-light .border-emerald-950\/60,
+.theme-light .border-emerald-950\/80,
+.theme-light .border-emerald-950\/90,
+.theme-light .border-emerald-950,
+.theme-light .border-emerald-800\/40,
+.theme-light .border-emerald-800\/60,
+.theme-light .border-emerald-800\/80 {
+  border-color: #cbd5e1 !important;
+}
+
+/* High-Contrast Typography */
+.theme-light h1,
+.theme-light h2,
+.theme-light h3,
+.theme-light h4,
+.theme-light .text-white {
+  color: #0f172a !important;
+}
+
+.theme-light .text-slate-100,
+.theme-light .text-slate-200,
+.theme-light .text-slate-300 {
+  color: #1e293b !important;
+}
+
+.theme-light .text-slate-400 {
+  color: #475569 !important;
+}
+
+.theme-light .text-emerald-100,
+.theme-light .text-emerald-200,
+.theme-light .text-emerald-300 {
+  color: #064e3b !important;
+}
+
+.theme-light .text-emerald-400 {
+  color: #047857 !important;
+}
+
+.theme-light .text-emerald-100\/70,
+.theme-light .text-emerald-100\/80,
+.theme-light .text-emerald-200\/70,
+.theme-light .text-emerald-300\/60,
+.theme-light .text-emerald-300\/70,
+.theme-light .text-emerald-300\/80,
+.theme-light .text-emerald-400\/70,
+.theme-light .text-emerald-400\/80 {
+  color: #334155 !important;
+}
+
+/* Form Controls and Inputs in Light Mode */
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+.theme-light input:focus,
+.theme-light select:focus,
+.theme-light textarea:focus {
+  border-color: #059669 !important;
+  outline-color: #059669 !important;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* High-contrast Cards & Modals */
+.theme-light .rounded-2xl.border,
+.theme-light .rounded-xl.border {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light [role="dialog"] {
+  color: #0f172a !important;
+}
+
+.theme-light [role="dialog"] .bg-\[\#08170f\],
+.theme-light [role="dialog"] .bg-\[\#07130c\] {
+  background-color: #ffffff !important;
+}
+
+/* Mobile Navigation Drawer in Light Mode */
+.theme-light header .lg\:hidden {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.theme-light header .lg\:hidden button {
+  color: #1e293b !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Footer: High-contrast Dark Slate grounding */
+.theme-light footer {
+  background-color: #0a1710 !important;
+  color: #e2e8f0 !important;
+}
+
+.theme-light footer h3,
+.theme-light footer h4,
+.theme-light footer .text-white {
+  color: #ffffff !important;
+}
+
+.theme-light footer .text-emerald-100\/70,
+.theme-light footer .text-emerald-100\/80,
+.theme-light footer .text-emerald-300\/60 {
+  color: #94a3b8 !important;
+}
+
+.theme-light footer .text-emerald-400 {
+  color: #34d399 !important;
+}
+
